@@ -1,9 +1,24 @@
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   border: 1px solid #eaeaea;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
+  padding: 10px 15px;
+}
+.card-image {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-data {
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fullname {
+  font-weight: bold;
 }

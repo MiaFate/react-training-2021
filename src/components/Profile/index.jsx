@@ -6,16 +6,21 @@ const Profile = (props) => {
 
   return (
     <div className="card">
-      <Link to={{ pathname: "/FullProfile", profile: profile }}>
-        <img
-          src={profile.picture.thumbnail}
-          alt={`${profile.name.first} ${profile.name.last}`}
-        />
-      </Link>
-
-      <p>{`${profile.name.title} ${profile.name.first} ${profile.name.last}`}</p>
+      <div className="card-image">
+        <Link to={{ pathname: "/FullProfile", profile: profile }}>
+          <img
+            src={profile.picture.thumbnail}
+            alt={`${profile.name.first} ${profile.name.last}`}
+            height="48px"
+            width="48px"
+          />
+        </Link>
+      </div>
+      <div className="card-data">
+      <p className="fullname">{`${profile.name.title} ${profile.name.first} ${profile.name.last}`}</p>
       <p>{profile.location.city}</p>
       <p>{profile.location.country}</p>
+      </div>
     </div>
   );
 };
