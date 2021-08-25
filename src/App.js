@@ -7,7 +7,7 @@ import FullProfile from "./components/FullProfile";
 
 function App() {
   const [profiles, setProfiles] = useState([]);
-  
+
   const fetchProfiles = async () => {
     try {
       const data = await getProfiles();
@@ -22,25 +22,23 @@ function App() {
     fetchProfiles();
   }, []);
 
-  
-
   return (
     <Router>
       <main className="container">
         <header>
-        <Link to="/"><h1>Home</h1></Link>
+          <Link to="/">
+            <h1>Home</h1>
+          </Link>
         </header>
-        
+
         <Switch>
           <Route exact path="/">
             <Master profiles={profiles} />
           </Route>
-          <Route path="/FullProfile" component={(props)=><FullProfile {...props}/>}>
-            {/* <FullProfile profiles={profiles} /> */}
-          </Route>
-            
-          
-          
+          <Route
+            path="/FullProfile"
+            component={(props) => <FullProfile {...props} />}
+          ></Route>
         </Switch>
       </main>
     </Router>
