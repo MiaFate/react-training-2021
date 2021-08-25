@@ -1,0 +1,26 @@
+.master-content {
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 18px;
+  padding: 0 10px;
+}
+@media (min-width: 768px) {
+    .master-content {
+      grid-template-columns: auto auto;
+    }
+  }
+@media (orientation: landscape) {
+  .master-content {
+    grid-template-columns: auto auto;
+  }
+}
+@media (min-width: 1024px) {
+  .master-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1920px) {
+  .master-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
