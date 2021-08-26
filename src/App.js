@@ -25,12 +25,12 @@ function App() {
   return (
     <Router>
       <main className="container">
-        <header>
-          <Link to="/">
+        <header className="header">
+          <Link id="link-h1-text" to="/">
             <h1>Home</h1>
           </Link>
         </header>
-
+        <hr />
         <Switch>
           <Route exact path="/">
             <Master profiles={profiles} />

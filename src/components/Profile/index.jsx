@@ -11,7 +11,7 @@ const Profile = (props) => {
         <div className="card-image">
           <img
             src={profile.picture.thumbnail}
-            alt={`${profile.name.first} ${profile.name.last}`}
+            alt={`${profile.name.title} ${profile.name.first} ${profile.name.last}`}
             height="48px"
             width="48px"
           />
