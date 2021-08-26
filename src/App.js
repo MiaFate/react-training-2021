@@ -34,7 +34,7 @@ function App() {
               <MoonLoader
                 color={"#36D7B7"}
                 loading={isLoading}
-                css={"display:flex; margin-top: calc(50vh - 70px); "}
+                css={"display:flex; margin-top: calc(50vh - 35px); "}
                 size={70}
               />
             ) : (

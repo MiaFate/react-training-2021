@@ -2,25 +2,41 @@ p span {
   font-weight: bold;
 }
 .full-profile {
-  height: 100vh;
+   height: 100vh; 
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   text-align: center;
 }
 .full-profile-card {
+  justify-self: flex-start;
   margin-top: 30px;
   padding: 10px;
   border: 1px solid #eaeaea;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
-.full-profile-card:hover {
+
+button {
+  
+  margin: 70px;
+  padding: 10px;
+  border: 1px solid #eaeaea;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+}
+button:hover {
   transform: scale(1.05);
 }
 @media (min-width: 768px) {
+  button{
+    margin: 10px;
+  }
+  .full-profile{
+    justify-content: start;
+  }
   .full-profile-card {
     width: 50vw;
   }
