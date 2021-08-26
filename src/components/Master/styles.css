@@ -6,10 +6,10 @@
   
 }
 @media (min-width: 768px) {
-    .master-content {
-      grid-template-columns: auto auto;
-    }
+  .master-content {
+    grid-template-columns: auto auto;
   }
+}
 @media (orientation: landscape) {
   .master-content {
     grid-template-columns: auto auto;
