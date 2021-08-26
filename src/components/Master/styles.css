@@ -3,7 +3,7 @@
   grid-template-columns: auto;
   grid-gap: 18px;
   padding: 20px;
-  
+  text-align: center;
 }
 @media (min-width: 768px) {
   .master-content {

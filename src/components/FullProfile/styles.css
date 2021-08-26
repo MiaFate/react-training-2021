@@ -2,12 +2,13 @@ p span {
   font-weight: bold;
 }
 .full-profile {
-  height: calc(100vh - 61px);
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  text-align: center;
 }
 .full-profile-card {
   margin-top: 30px;
@@ -16,8 +17,8 @@ p span {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 3px;
 }
-.full-profile-card:hover{
-    transform: scale(1.05);
+.full-profile-card:hover {
+  transform: scale(1.05);
 }
 @media (min-width: 768px) {
   .full-profile-card {

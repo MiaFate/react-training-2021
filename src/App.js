@@ -1,18 +1,21 @@
 import "./App.css";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getProfiles } from "./API";
 import Master from "./components/Master";
 import FullProfile from "./components/FullProfile";
 
+import MoonLoader from "react-spinners/MoonLoader";
+
 function App() {
   const [profiles, setProfiles] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   const fetchProfiles = async () => {
     try {
       const data = await getProfiles();
-      console.log(data);
       setProfiles(data);
+      setIsLoading(false);
     } catch (error) {
       console.log(error.message);
     }
@@ -25,15 +28,18 @@ function App() {
   return (
     <Router>
       <main className="container">
-        <header className="header">
-          <Link id="link-h1-text" to="/">
-            <h1>Home</h1>
-          </Link>
-        </header>
-        <hr />
         <Switch>
           <Route exact path="/">
-            <Master profiles={profiles} />
+            {isLoading ? (
+              <MoonLoader
+                color={"#36D7B7"}
+                loading={isLoading}
+                css={"display:flex; margin-top: calc(50vh - 70px); "}
+                size={70}
+              />
+            ) : (
+              <Master profiles={profiles} />
+            )}
           </Route>
           <Route
             path="/FullProfile"
